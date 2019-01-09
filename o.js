@@ -32,6 +32,7 @@ var lex = function(input) {
             value: value
         });
     };
+
     while (i < input.length) {
         c = input[i];
         if (isWhiteSpace(c)) advance();
@@ -62,8 +63,17 @@ var lex = function(input) {
         }
         else if (isIdentifier(c)) {
             var idn = c;
-            while (isIdentifier(advance())) idn += c;
+            //while (isIdentifier(advance())) idn += c;
+            //while (!isOperator(advance())) idn += c;
 
+            do {
+                advance();            
+                if(!isOperator(c) && isIdentifier(c)) {
+                    idn+=c;
+                }else{
+                    break;
+                }
+            }while(true)
 
             if(String(idn).toLowerCase() == "true" || String(idn).toLowerCase() == "false") {
                 addToken("boolean", String(idn).toLowerCase());
@@ -257,7 +267,7 @@ var parse = function(tokens) {
 };
 
 
-var evaluate = function(parseTree) {
+var evaluate = function(parseTree, data) {
 
     var operators = {
         "+": function(a, b) {
@@ -337,6 +347,26 @@ var evaluate = function(parseTree) {
         }
         else if (node.type === "identifier") {
             var value = args.hasOwnProperty(node.value) ? args[node.value] : variables[node.value];
+
+            if (typeof value === "undefined") {
+                // search data 
+
+                var searchKeyArray = String(node.value).split(".");
+
+                var result = data;
+
+                for(var i=0;i<searchKeyArray.length;i++) {
+                    try {
+                        result = result[searchKeyArray[i]];
+                    } catch(e) {
+                        value = undefined;
+                        break;
+                    }
+                }
+
+                value = result;
+            }
+
             if (typeof value === "undefined") throw node.value + " is undefined";
             return value;
         }
@@ -378,6 +408,16 @@ var calculate = function(input) {
     }
 };
 
+testjson = {
+    "formState" : {
+        "mainModel" : {
+            "formId_12" : {
+                "$c83d81a6a3de4531a46a1148d091c841" : 100
+            }
+        }
+    }
+}
+
 //tokens = lex('(1==2) || false || modelExists("messagex")');
 // tokens = lex(`
 // a = 3
@@ -386,9 +426,12 @@ var calculate = function(input) {
 // ! ! true
 // `)
 //tokens = lex('1+2-3')
+
+// (!formState.mainModel.formId_12.$c83d81a6a3de4531a46a1148d091c841)
 tokens = lex(`
-1+3+4==8
+!false && !!!false
 `)
+//sin(formState.mainModel.formId_12.$c83d81a6a3de4531a46a1148d091c841)
 console.log('## LEX #########################################################')
 console.log(JSON.stringify(tokens,null,2));
 
@@ -397,8 +440,19 @@ console.log("");
 console.log('## TREE #########################################################')
 console.log(JSON.stringify(parseTree,null,2));
 
-output = evaluate(parseTree);
+output = evaluate(parseTree, testjson);
 console.log("");
 console.log('## RESULT #########################################################')
 console.log(output);
 
+
+// l0 = testjson;
+// console.log(l0);
+// l1 = testjson["formState"];
+// console.log(l1);
+// l2 = l1["model"];
+// console.log(l2);
+// l3 = l2["formId_12"];
+// console.log(l3);
+// l4 = l3["$c83d81a6a3de4531a46a1148d091c841"];
+// console.log(l4);
