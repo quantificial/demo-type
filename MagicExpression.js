@@ -38,7 +38,7 @@ var Lexer = /** @class */ (function () {
             value: value
         });
     };
-    Lexer.prototype.process = function () {
+    Lexer.prototype.getResult = function () {
         this.pointer = 0;
         while (this.pointer < this.expression.length) {
             this.c = this.expression[this.pointer]; // current char
@@ -107,4 +107,6 @@ var Lexer = /** @class */ (function () {
 exports.Lexer = Lexer;
 //let lexer = new Lexer("(!true)&&!(false)");
 var lexer = new Lexer("!!!!!false");
-console.log(lexer.process());
+console.log(lexer.getResult());
+console.log(lexer.getResult());
+console.log(lexer.getResult());

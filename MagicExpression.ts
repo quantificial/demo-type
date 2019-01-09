@@ -51,7 +51,7 @@ export class Lexer {
         });
     }
 
-    public process(): any {
+    public getResult(): any {
 
         this.pointer = 0;
 
@@ -120,9 +120,31 @@ export class Lexer {
 }
 
 
+export class Paser {
+    
+    private pointer = 0;
+    private c;
+    private tokens: any = [];
+
+    constructor(tokens: any) {
+        this.tokens = tokens;        
+    }
+
+    
+}
+
+
+
+
+
+
+
 
 //let lexer = new Lexer("(!true)&&!(false)");
 let lexer = new Lexer("!!!!!false");
-console.log(lexer.process())
+console.log(lexer.getResult())
+console.log(lexer.getResult())
+console.log(lexer.getResult())
+
 
 

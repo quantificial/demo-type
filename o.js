@@ -68,7 +68,8 @@ var lex = function(input) {
 
             do {
                 advance();            
-                if(!isOperator(c) && isIdentifier(c)) {
+                //if(!isOperator(c) && isIdentifier(c)) {
+                if(!isOperator(c)   ) {
                     idn+=c;
                 }else{
                     break;
@@ -94,11 +95,6 @@ var lex = function(input) {
 };
 
 var parse = function(tokens) {
-
-    testModel = {
-        "message" : "message1"
-    };
-
     
     var symbols = {},    
         // lbp is left binding power
@@ -412,7 +408,7 @@ testjson = {
     "formState" : {
         "mainModel" : {
             "formId_12" : {
-                "$c83d81a6a3de4531a46a1148d091c841" : 100
+                "$c83d81a6a3de4531a46a1148d091c841" : undefined
             }
         }
     }
@@ -428,10 +424,11 @@ testjson = {
 //tokens = lex('1+2-3')
 
 // (!formState.mainModel.formId_12.$c83d81a6a3de4531a46a1148d091c841)
-tokens = lex(`
-!false && !!!false
-`)
+//tokens = lex(`!false && !!!false`)
 //sin(formState.mainModel.formId_12.$c83d81a6a3de4531a46a1148d091c841)
+
+tokens = lex('(!formState.mainModel.formId_12.$c83d81a6a3de4531a46a1148d091c841)')
+
 console.log('## LEX #########################################################')
 console.log(JSON.stringify(tokens,null,2));
 
