@@ -38,7 +38,7 @@ var Lexer = /** @class */ (function () {
             value: value
         });
     };
-    Lexer.prototype.getResult = function () {
+    Lexer.prototype.generateTokens = function () {
         this.pointer = 0;
         while (this.pointer < this.expression.length) {
             this.c = this.expression[this.pointer]; // current char
@@ -105,8 +105,44 @@ var Lexer = /** @class */ (function () {
     return Lexer;
 }());
 exports.Lexer = Lexer;
+var Parser = /** @class */ (function () {
+    function Parser(tokens) {
+        this.pointer = 0;
+        this.tokens = [];
+        this.symbols = {};
+        this.tokens = tokens;
+    }
+    // lbp is left binding power
+    // nud is null denotative function
+    // led is left denotative function 
+    Parser.prototype.createSymbol = function (id, lbp, nud, led) {
+        if (!this.symbols[id]) {
+            this.symbols[id] = {
+                lbp: lbp,
+                nud: nud,
+                led: led
+            };
+        }
+        else {
+            if (nud)
+                this.symbols[id].nud = nud;
+            if (led)
+                this.symbols[id].led = led;
+            if (lbp)
+                this.symbols[id].lbp = lbp;
+        }
+    };
+    ;
+    Parser.prototype.generateTree = function () {
+        this.createSymbol(1, 2, 3, 4);
+        console.log(this.symbols);
+    };
+    return Parser;
+}());
+exports.Parser = Parser;
 //let lexer = new Lexer("(!true)&&!(false)");
 var lexer = new Lexer("!!!!!false");
-console.log(lexer.getResult());
-console.log(lexer.getResult());
-console.log(lexer.getResult());
+var tokens = lexer.generateTokens();
+console.log(tokens);
+var tree = new Parser(tokens);
+console.log(tree.generateTree());

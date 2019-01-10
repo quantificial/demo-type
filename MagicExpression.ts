@@ -51,7 +51,7 @@ export class Lexer {
         });
     }
 
-    public getResult(): any {
+    public generateTokens(): any {
 
         this.pointer = 0;
 
@@ -120,14 +120,70 @@ export class Lexer {
 }
 
 
-export class Paser {
+export class Parser {
     
     private pointer = 0;
     private c;
     private tokens: any = [];
 
+    private symbols = {};
+        
     constructor(tokens: any) {
         this.tokens = tokens;        
+    }
+
+    // lbp is left binding power, 
+    // if the processing operator "lbp" is equal or smaller than the left node
+    // the current operator node will not be binded to the left side
+    //   
+    //           -  <- lbp 3 , equal to lbp of '+'
+    //          /  \ 
+    //   lbp 3 +     3 
+    //       /  \
+    //      1    2  <-- lbp is 3, transferring from operator '+'
+    //          
+    //    lbp 3 +     
+    //         /  \
+    //        1    *   <-- lpb 4  (lbp is greater than the left node)
+    //            / \
+    //  lbp 3 -> 2   3
+    //
+    // nud is null denotative function
+    // led is left denotative function 
+    private createSymbol(id, lbp, nud, led) {
+        if (!this.symbols[id]) {
+            this.symbols[id] = {
+                lbp: lbp,
+                nud: nud,
+                led: led
+            };
+        }
+        else {
+            if (nud) this.symbols[id].nud = nud;
+            if (led) this.symbols[id].led = led;
+            if (lbp) this.symbols[id].lbp = lbp;
+        }
+    };
+
+    private interpretToken (token) {
+        var F = function() {};
+
+        if(token.type=='operator') {
+            F.prototype = this.symbols[token.value];
+        }else{
+            F.prototype = this.symbols[token.type]
+        }
+        var sym = new F;
+        sym.type = token.type;
+        sym.value = token.value;
+        return sym;
+    };    
+
+
+    public generateTree() {
+
+        this.createSymbol(1,2,3,4)
+        console.log(this.symbols);        
     }
 
     
@@ -142,9 +198,9 @@ export class Paser {
 
 //let lexer = new Lexer("(!true)&&!(false)");
 let lexer = new Lexer("!!!!!false");
-console.log(lexer.getResult())
-console.log(lexer.getResult())
-console.log(lexer.getResult())
-
+let tokens = lexer.generateTokens();
+console.log(tokens)
+let tree = new Parser(tokens)
+console.log(tree.generateTree());
 
 
