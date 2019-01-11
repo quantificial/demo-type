@@ -434,8 +434,9 @@ testjson = {
 //tokens = lex(`!false && !!!false`)
 //sin(formState.mainModel.formId_12.$c83d81a6a3de4531a46a1148d091c841)
 
-tokens = lex('!formState.mainModel.formId_1.$c83d81a6a3de4531a46a1148d091c841')
-//tokens = lex('(1+2*3)')
+// tokens = lex('!formState.mainModel.formId_1.$c83d81a6a3de4531a46a1148d091c841')
+//tokens = lex('(!formState.mainModel.formId_12.$c83d81a6a3de4531a46a1148d091c841)')
+tokens = lex('(1+2*3)+99')
 
 console.log('## LEX #########################################################')
 console.log(JSON.stringify(tokens,null,2));
