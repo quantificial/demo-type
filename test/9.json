@@ -1,0 +1,30 @@
+{
+    "label": "FORM.HEADER.UPLOAD_DOCUMENT",
+    "fields": [
+        {
+            "key": "formId_9",
+            "fieldGroup": [
+                {
+                    "key": "uploadDocUUID",
+                    "alias": "Upload Document",
+                    "fieldGroup": [
+                        {
+                            "type": "upload-document",
+                            "templateOptions": {
+                                "formGroupKey": "hkid",
+                                "header": "UPLOAD_DOCUMENT.HKID_TITLE"
+                            }
+                        },
+                        {
+                            "type": "upload-document",
+                            "templateOptions": {
+                                "formGroupKey": "others",
+                                "header": "UPLOAD_DOCUMENT.OTHER_DOCUMENT_TITLE"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

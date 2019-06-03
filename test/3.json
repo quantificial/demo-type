@@ -1,0 +1,985 @@
+{
+    "label": "FORM.HEADER.APPLICATION_INFORMATION",
+    "fields": [
+        {
+            "key": "formId_3",
+            "hideExpression": "!formState.shareOption.hasProposal || formState.mainModel.formId_12.$d660203808cb4381a481e8d3b5669012",
+            "fieldGroup": [
+                {
+                    "templateOptions": {
+                        "content": "formId_3.$6f9b27b9623d4702891027c7fdc1645b"
+                    },
+                    "type": "header2"
+                },
+                {
+                    "templateOptions": {
+                        "content": "formId_3.$87620efa991842c48023b43fd9318e76"
+                    },
+                    "type": "header3"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$a92f2786a1ef4127b5335e48417c65f9",
+                        "required": true,
+                        "maxLength": 50
+                    },
+                    "validators": {
+                        "validation": [
+                            "englishCharacters"
+                        ]
+                    },
+                    "key": "$a92f2786a1ef4127b5335e48417c65f9",
+                    "type": "input"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$691a1bfb7bda477dbe7f869031b3d05b",
+                        "required": true,
+                        "maxLength": 50
+                    },
+                    "validators": {
+                        "validation": [
+                            "englishCharacters"
+                        ]
+                    },
+                    "key": "$691a1bfb7bda477dbe7f869031b3d05b",
+                    "type": "input"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$a642b955ac544579bd17c94047ca162d",
+                        "required": false,
+                        "maxLength": 20
+                    },
+                    "key": "$a642b955ac544579bd17c94047ca162d",
+                    "type": "input"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$73b0b46c994a4deaaa47e512ec579e08",
+                        "required": true,
+                        "options": [
+                            {
+                                "value": "",
+                                "label": "FORM.AUTOCOMPLETE.PLEASE_SELECT"
+                            }
+                        ]
+                    },
+                    "defaultValue": "",
+                    "key": "$73b0b46c994a4deaaa47e512ec579e08",
+                    "type": "autocomplete",
+                    "preprocess": [
+                        {
+                            "preprocessor": "lov-preprocessor",
+                            "data": {
+                                "lov": "selectRelation"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "hideExpression": "formState.mainModel.formId_3.$73b0b46c994a4deaaa47e512ec579e08!=='OTH'",
+                    "type": "input",
+                    "key": "$915bff69d6db4dd88c8f154c0962f6a7",
+                    "templateOptions": {
+                        "label": "formId_3.$915bff69d6db4dd88c8f154c0962f6a7",
+                        "required": true
+                    }
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$c6a2555b66d042a485cf9501d446c2c7",
+                        "required": true,
+                        "options": [
+                            {
+                                "value": "",
+                                "label": "FORM.AUTOCOMPLETE.PLEASE_SELECT"
+                            }
+                        ]
+                    },
+                    "defaultValue": "",
+                    "key": "$c6a2555b66d042a485cf9501d446c2c7",
+                    "type": "autocomplete",
+                    "preprocess": [
+                        {
+                            "preprocessor": "lov-preprocessor",
+                            "data": {
+                                "lov": "selectRelationshipWithAgent"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "hideExpression": "formState.mainModel.formId_3.$c6a2555b66d042a485cf9501d446c2c7!=='4'",
+                    "templateOptions": {
+                        "label": "formId_3.$7aeaaaa544094cfebfd566a20e6a362d",
+                        "required": true
+                    },
+                    "key": "$7aeaaaa544094cfebfd566a20e6a362d",
+                    "type": "input"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$ed4527d872bf42c8b4d6b05053a6d096",
+                        "required": true,
+                        "options": [
+                            {
+                                "value": "",
+                                "label": "FORM.AUTOCOMPLETE.PLEASE_SELECT"
+                            }
+                        ]
+                    },
+                    "defaultValue": "",
+                    "key": "$ed4527d872bf42c8b4d6b05053a6d096",
+                    "type": "autocomplete",
+                    "preprocess": [
+                        {
+                            "preprocessor": "lov-preprocessor",
+                            "data": {
+                                "lov": "selectIdType"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$df25006b60604bc29bda2a7c56597ba5",
+                        "required": true,
+                        "description": "FORM.DESCRIPTION.HKID",
+                        "validatorControl": {
+                            "triggerBykey": "$ed4527d872bf42c8b4d6b05053a6d096",
+                            "triggerByvalue": "I"
+                        },
+                        "wrapperControl": {
+                            "type": "validateOtherFieldsOnChange",
+                            "targetKey": "$ed4527d872bf42c8b4d6b05053a6d096"
+                        }
+                    },
+                    "validators": {
+                        "validation": [
+                            "hkid",
+                            "asciiCharacters"
+                        ]
+                    },
+                    "key": "$df25006b60604bc29bda2a7c56597ba5",
+                    "type": "input"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$62010b87d6ac48f8a6fa88a02183c273",
+                        "required": true,
+                        "description": "FORM.DESCRIPTION.NATIONALITY",
+                        "options": [
+                            {
+                                "value": "",
+                                "label": "FORM.AUTOCOMPLETE.PLEASE_SELECT"
+                            }
+                        ]
+                    },
+                    "defaultValue": "",
+                    "key": "$62010b87d6ac48f8a6fa88a02183c273",
+                    "type": "autocomplete",
+                    "preprocess": [
+                        {
+                            "preprocessor": "lov-preprocessor",
+                            "data": {
+                                "lov": "selectNationality"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$545f5023795944bebc20d4134ef4d576",
+                        "required": true,
+                        "options": [
+                            {
+                                "value": "",
+                                "label": "FORM.AUTOCOMPLETE.PLEASE_SELECT"
+                            }
+                        ]
+                    },
+                    "defaultValue": "",
+                    "key": "$545f5023795944bebc20d4134ef4d576",
+                    "type": "autocomplete",
+                    "preprocess": [
+                        {
+                            "preprocessor": "lov-preprocessor",
+                            "data": {
+                                "lov": "selectCountry"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$125808396b6b42e2aba6fb4851146f86",
+                        "required": true,
+                        "singleColumn": false,
+                        "canDeselect": false
+                    },
+                    "key": "$125808396b6b42e2aba6fb4851146f86",
+                    "type": "radio",
+                    "preprocess": [
+                        {
+                            "preprocessor": "lov-preprocessor",
+                            "data": {
+                                "lov": "selectGender"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$00a21ec7a4054eec953e6398332fbda9",
+                        "required": true,
+                        "type": "number"
+                    },
+                    "key": "$00a21ec7a4054eec953e6398332fbda9",
+                    "type": "input"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$ff2876e164b347258caf45a3cbc3b5f3",
+                        "hideFutureDate": true,
+                        "datepickerCustomControl": {
+                            "type": "setHiddenFormFieldActualAge",
+                            "key": "$f2154ed3126f49b59385055fd715e530"
+                        },
+                        "required": true
+                    },
+                    "key": "$ff2876e164b347258caf45a3cbc3b5f3",
+                    "type": "datepicker"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$c196f3461af14e1eb97a8018d6c81115",
+                        "required": true,
+                        "options": [
+                            {
+                                "value": "",
+                                "label": "FORM.AUTOCOMPLETE.PLEASE_SELECT"
+                            }
+                        ]
+                    },
+                    "defaultValue": "",
+                    "key": "$c196f3461af14e1eb97a8018d6c81115",
+                    "type": "autocomplete",
+                    "preprocess": [
+                        {
+                            "preprocessor": "lov-preprocessor",
+                            "data": {
+                                "lov": "selectCountry"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$428e47e60b2b456db505ce9ee1527dfd",
+                        "required": true,
+                        "singleColumn": false,
+                        "canDeselect": false,
+                        "options": []
+                    },
+                    "key": "$428e47e60b2b456db505ce9ee1527dfd",
+                    "type": "radio",
+                    "preprocess": [
+                        {
+                            "preprocessor": "lov-preprocessor",
+                            "data": {
+                                "lov": "selectMartial"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "templateOptions": {
+                        "content": "formId_3.$93995678c3394fdd87887ed923b8e76e"
+                    },
+                    "type": "header3"
+                },
+                {
+                    "customType": "tel",
+                    "wrappers": [
+                        "width-wrapper",
+                        "field-wrapper"
+                    ],
+                    "templateOptions": {
+                        "label": "formId_3.$3ab4f884a5f34f1ba6c41ffaa0014ce3",
+                        "required": true
+                    },
+                    "fieldGroupClassName": "row",
+                    "fieldGroup": [
+                        {
+                            "className": "col-12",
+                            "type": "autocomplete",
+                            "preprocess": [
+                                {
+                                    "preprocessor": "lov-preprocessor",
+                                    "data": {
+                                        "lov": "selectPhone"
+                                    }
+                                }
+                            ],
+                            "key": "$3ab4f884a5f34f1ba6c41ffaa0014ce3",
+                            "defaultValue": "HK",
+                            "templateOptions": {
+                                "clearable": false,
+                                "fullWidth": true,
+                                "required": true,
+                                "options": []
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "key": "$3d12844d5abc4ae4b886579a1b29050a",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "required": true,
+                                "type": "tel",
+                                "maxLength": "17"
+                            },
+                            "validators": {
+                                "validation": [
+                                    "digitOnly"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "customType": "tel",
+                    "wrappers": [
+                        "width-wrapper",
+                        "field-wrapper"
+                    ],
+                    "templateOptions": {
+                        "label": "formId_3.$9377a8d42c8f484ba0f5549f2d5c8967"
+                    },
+                    "fieldGroupClassName": "row",
+                    "fieldGroup": [
+                        {
+                            "className": "col-12",
+                            "type": "autocomplete",
+                            "preprocess": [
+                                {
+                                    "preprocessor": "lov-preprocessor",
+                                    "data": {
+                                        "lov": "selectPhone"
+                                    }
+                                }
+                            ],
+                            "key": "$9377a8d42c8f484ba0f5549f2d5c8967",
+                            "defaultValue": "HK",
+                            "templateOptions": {
+                                "clearable": false,
+                                "fullWidth": true,
+                                "options": []
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "key": "$d7d287e36c024860847462f931afcdb9",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "type": "tel",
+                                "maxLength": "17"
+                            },
+                            "validators": {
+                                "validation": [
+                                    "digitOnly"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "customType": "tel",
+                    "wrappers": [
+                        "width-wrapper",
+                        "field-wrapper"
+                    ],
+                    "templateOptions": {
+                        "label": "formId_3.$bd3f505210cf4e47b83a34af5622cd87"
+                    },
+                    "fieldGroupClassName": "row",
+                    "fieldGroup": [
+                        {
+                            "className": "col-12",
+                            "type": "autocomplete",
+                            "preprocess": [
+                                {
+                                    "preprocessor": "lov-preprocessor",
+                                    "data": {
+                                        "lov": "selectPhone"
+                                    }
+                                }
+                            ],
+                            "key": "$bd3f505210cf4e47b83a34af5622cd87",
+                            "defaultValue": "HK",
+                            "templateOptions": {
+                                "clearable": false,
+                                "fullWidth": true,
+                                "options": []
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "key": "$22cd87b14c04406ca9a44b8f7d07d8c9",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "type": "tel",
+                                "maxLength": "17"
+                            },
+                            "validators": {
+                                "validation": [
+                                    "digitOnly"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "templateOptions": {
+                        "content": "formId_3.$a0d2f034bf1144ce8c6a6974b7fa0138"
+                    },
+                    "type": "header3"
+                },
+                {
+                    "customType": "address",
+                    "fieldGroupClassName": "row",
+                    "wrappers": [
+                        "width-wrapper",
+                        "field-wrapper"
+                    ],
+                    "fieldGroup": [
+                        {
+                            "className": "col-12",
+                            "type": "radio",
+                            "key": "$55a06e3ca6f04edcb8aeab82173ce307",
+                            "defaultValue": false,
+                            "templateOptions": {
+                                "description": "ADDRESS.ADDR_LANG",
+                                "options": [
+                                    {
+                                        "value": false,
+                                        "label": "ADDRESS.ENG"
+                                    },
+                                    {
+                                        "value": true,
+                                        "label": "ADDRESS.CHI"
+                                    }
+                                ],
+                                "fullWidth": true,
+                                "required": true
+                            }
+                        },
+                        {
+                            "className": "col-4 align-self-end",
+                            "type": "input",
+                            "validators": {
+                                "validation": [
+                                    "asciiCharacters"
+                                ]
+                            },
+                            "key": "$ccd899f4db2b41a2aa3c3b1eb5ae90c5",
+                            "hideExpression": "formState.mainModel.formId_3.$55a06e3ca6f04edcb8aeab82173ce307",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "label": "ADDRESS.FLAT",
+                                "maxLength": "6"
+                            }
+                        },
+                        {
+                            "className": "col-4 align-self-end",
+                            "type": "input",
+                            "validators": {
+                                "validation": [
+                                    "asciiCharacters"
+                                ]
+                            },
+                            "key": "$9dc6c1cd678d4751acb45ea05a80c991",
+                            "hideExpression": "formState.mainModel.formId_3.$55a06e3ca6f04edcb8aeab82173ce307",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "label": "ADDRESS.FLOOR",
+                                "maxLength": "6"
+                            }
+                        },
+                        {
+                            "className": "col-4 align-self-end",
+                            "type": "input",
+                            "validators": {
+                                "validation": [
+                                    "asciiCharacters"
+                                ]
+                            },
+                            "key": "$bf3bd005f19246a0b5e2bdac069096f8",
+                            "hideExpression": "formState.mainModel.formId_3.$55a06e3ca6f04edcb8aeab82173ce307",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "label": "ADDRESS.BLOCK",
+                                "maxLength": "6"
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "validators": {
+                                "validation": [
+                                    "asciiCharacters"
+                                ]
+                            },
+                            "key": "$cd3bfcb1827541df8f1b657cb4c8b795",
+                            "hideExpression": "formState.mainModel.formId_3.$55a06e3ca6f04edcb8aeab82173ce307",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "label": "ADDRESS.ESTATE",
+                                "maxLength": "30"
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "validators": {
+                                "validation": [
+                                    "asciiCharacters"
+                                ]
+                            },
+                            "key": "$3166136b8993433e8687f359da80d16a",
+                            "hideExpression": "formState.mainModel.formId_3.$55a06e3ca6f04edcb8aeab82173ce307",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "label": "ADDRESS.STREET",
+                                "maxLength": "30"
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "validators": {
+                                "validation": [
+                                    "asciiCharacters"
+                                ]
+                            },
+                            "key": "$18ea1c9681494a37a9e16e8763a62a35",
+                            "hideExpression": "formState.mainModel.formId_3.$55a06e3ca6f04edcb8aeab82173ce307",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "label": "ADDRESS.DISTRICT",
+                                "required": true,
+                                "maxLength": "30"
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "autocomplete",
+                            "preprocess": [
+                                {
+                                    "preprocessor": "lov-preprocessor",
+                                    "data": {
+                                        "lov": "selectCountry"
+                                    }
+                                }
+                            ],
+                            "key": "$d3e65a253d9d4c68a023574ee961e4c3",
+                            "hideExpression": "formState.mainModel.formId_3.$55a06e3ca6f04edcb8aeab82173ce307",
+                            "templateOptions": {
+                                "label": "ADDRESS.COUNTRY",
+                                "fullWidth": true,
+                                "required": true,
+                                "options": [
+                                    {
+                                        "value": "",
+                                        "label": "FORM.AUTOCOMPLETE.PLEASE_SELECT"
+                                    }
+                                ]
+                            },
+                            "defaultValue": ""
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "key": "$496211feed604ddf8c4705874e4db674",
+                            "hideExpression": "!formState.mainModel.formId_3.$55a06e3ca6f04edcb8aeab82173ce307",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "required": true,
+                                "maxLength": 26
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "key": "$8ad79f1e60034116a68cda5bd5b32dea",
+                            "hideExpression": "!formState.mainModel.formId_3.$55a06e3ca6f04edcb8aeab82173ce307",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "maxLength": 26
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "key": "$1f0308adf2bf44ab9171c178fb9f604a",
+                            "hideExpression": "!formState.mainModel.formId_3.$55a06e3ca6f04edcb8aeab82173ce307",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "maxLength": 26
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "key": "$340fe1bc110c474fa301cd85fdbb936f",
+                            "hideExpression": "!formState.mainModel.formId_3.$55a06e3ca6f04edcb8aeab82173ce307",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "maxLength": 26
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "key": "$f4defaefd00f4e8ea9a380db76ec0e97",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "label": "ADDRESS.POSTAL",
+                                "required": false,
+                                "type": "tel",
+                                "maxLength": 9
+                            },
+                            "validators": {
+                                "validation": [
+                                    "digitOnly"
+                                ]
+                            },
+                            "hideExpression": "!formState.mainModel.formId_3.$1044c33e909a4fd0b8a7ff8831b686b2 && formState.mainModel.formId_3.$d3e65a253d9d4c68a023574ee961e4c3==='HK' || formState.mainModel.formId_3.$d3e65a253d9d4c68a023574ee961e4c3==='MC'"
+                        }
+                    ]
+                },
+                {
+                    "templateOptions": {
+                        "content": "formId_3.$5a3305799ba242748e63161b44a76ba4"
+                    },
+                    "type": "header3"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$798c4b160d5c47578224f31630af235a",
+                        "required": true,
+                        "maxLength": 50
+                    },
+                    "validators": {
+                        "validation": [
+                            "asciiCharacters"
+                        ]
+                    },
+                    "key": "$798c4b160d5c47578224f31630af235a",
+                    "type": "input"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$229bed9657df4ac2a9a34e069541280f",
+                        "required": true
+                    },
+                    "key": "$229bed9657df4ac2a9a34e069541280f",
+                    "type": "input"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$71c3b197f4dc42f19352ba3628cb3138",
+                        "required": true,
+                        "options": [
+                            {
+                                "value": "",
+                                "label": "FORM.AUTOCOMPLETE.PLEASE_SELECT"
+                            }
+                        ]
+                    },
+                    "defaultValue": "",
+                    "key": "$71c3b197f4dc42f19352ba3628cb3138",
+                    "type": "autocomplete",
+                    "preprocess": [
+                        {
+                            "preprocessor": "lov-preprocessor",
+                            "data": {
+                                "lov": "selectOccupCode"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "templateOptions": {
+                        "required": true,
+                        "specifyWrapper": true,
+                        "label": "formId_3.$884345b4f6324cf3ba60af4086e92adc",
+                        "maxLength": 20
+                    },
+                    "validators": {
+                        "validation": [
+                            "englishCharacters"
+                        ]
+                    },
+                    "key": "$884345b4f6324cf3ba60af4086e92adc",
+                    "type": "input",
+                    "hideExpression": "formState.mainModel.formId_3.$71c3b197f4dc42f19352ba3628cb3138!=='OTH'"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$74deef8e216149c7af0978cb4d5f47e5",
+                        "required": true
+                    },
+                    "key": "$74deef8e216149c7af0978cb4d5f47e5",
+                    "type": "input"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_3.$8211b5cb244f4a609e7db5f7b6d98369",
+                        "required": true,
+                        "options": [
+                            {
+                                "value": "",
+                                "label": "FORM.AUTOCOMPLETE.PLEASE_SELECT"
+                            }
+                        ]
+                    },
+                    "defaultValue": "",
+                    "key": "$8211b5cb244f4a609e7db5f7b6d98369",
+                    "type": "autocomplete",
+                    "preprocess": [
+                        {
+                            "preprocessor": "lov-preprocessor",
+                            "data": {
+                                "lov": "selectMonthlyIncome"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "templateOptions": {
+                        "content": "formId_3.$655debb673434be8bf2ea45147ac617a"
+                    },
+                    "type": "paragraph"
+                },
+                {
+                    "customType": "address",
+                    "fieldGroupClassName": "row",
+                    "wrappers": [
+                        "width-wrapper",
+                        "field-wrapper"
+                    ],
+                    "fieldGroup": [
+                        {
+                            "className": "col-12",
+                            "type": "radio",
+                            "key": "$1044c33e909a4fd0b8a7ff8831b686b2",
+                            "defaultValue": false,
+                            "templateOptions": {
+                                "description": "ADDRESS.ADDR_LANG",
+                                "options": [
+                                    {
+                                        "value": false,
+                                        "label": "ADDRESS.ENG"
+                                    },
+                                    {
+                                        "value": true,
+                                        "label": "ADDRESS.CHI"
+                                    }
+                                ],
+                                "fullWidth": true,
+                                "required": true
+                            }
+                        },
+                        {
+                            "className": "col-4 align-self-end",
+                            "type": "input",
+                            "validators": {
+                                "validation": [
+                                    "asciiCharacters"
+                                ]
+                            },
+                            "key": "$28e458b64f0744c79186f892304cfa49",
+                            "hideExpression": "formState.mainModel.formId_3.$1044c33e909a4fd0b8a7ff8831b686b2",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "label": "ADDRESS.FLAT",
+                                "maxLength": "6"
+                            }
+                        },
+                        {
+                            "className": "col-4 align-self-end",
+                            "type": "input",
+                            "validators": {
+                                "validation": [
+                                    "asciiCharacters"
+                                ]
+                            },
+                            "key": "$3885a73ad4c347ee82ff6a1c22397fd2",
+                            "hideExpression": "formState.mainModel.formId_3.$1044c33e909a4fd0b8a7ff8831b686b2",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "label": "ADDRESS.FLOOR",
+                                "maxLength": "6"
+                            }
+                        },
+                        {
+                            "className": "col-4 align-self-end",
+                            "type": "input",
+                            "validators": {
+                                "validation": [
+                                    "asciiCharacters"
+                                ]
+                            },
+                            "key": "$0e2db5f373234022bdddeab66427758e",
+                            "hideExpression": "formState.mainModel.formId_3.$1044c33e909a4fd0b8a7ff8831b686b2",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "label": "ADDRESS.BLOCK",
+                                "maxLength": "6"
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "validators": {
+                                "validation": [
+                                    "asciiCharacters"
+                                ]
+                            },
+                            "key": "$5a14847695c74d638c947072fc2c1247",
+                            "hideExpression": "formState.mainModel.formId_3.$1044c33e909a4fd0b8a7ff8831b686b2",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "label": "ADDRESS.ESTATE",
+                                "maxLength": "30"
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "validators": {
+                                "validation": [
+                                    "asciiCharacters"
+                                ]
+                            },
+                            "key": "$67c2be8a02984f089b72c3166284f3fc",
+                            "hideExpression": "formState.mainModel.formId_3.$1044c33e909a4fd0b8a7ff8831b686b2",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "label": "ADDRESS.STREET",
+                                "maxLength": "30"
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "key": "$06d7b129c681482ebe33b4c7ee32d575",
+                            "validators": {
+                                "validation": [
+                                    "asciiCharacters"
+                                ]
+                            },
+                            "hideExpression": "formState.mainModel.formId_3.$1044c33e909a4fd0b8a7ff8831b686b2",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "label": "ADDRESS.DISTRICT",
+                                "required": true,
+                                "maxLength": "30"
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "autocomplete",
+                            "preprocess": [
+                                {
+                                    "preprocessor": "lov-preprocessor",
+                                    "data": {
+                                        "lov": "selectCountry"
+                                    }
+                                }
+                            ],
+                            "defaultValue": "",
+                            "key": "$0dfc96dc7b894a099322607319a367e4",
+                            "hideExpression": "formState.mainModel.formId_3.$1044c33e909a4fd0b8a7ff8831b686b2",
+                            "templateOptions": {
+                                "label": "ADDRESS.COUNTRY",
+                                "fullWidth": true,
+                                "required": true,
+                                "options": [
+                                    {
+                                        "value": "",
+                                        "label": "FORM.AUTOCOMPLETE.PLEASE_SELECT"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "key": "$6ca1aecfd0874918a49e42fc9c1bac9d",
+                            "hideExpression": "!formState.mainModel.formId_3.$1044c33e909a4fd0b8a7ff8831b686b2",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "required": true,
+                                "maxLength": 26
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "key": "$310eae4fe3324902a2f1dc3400519af5",
+                            "hideExpression": "!formState.mainModel.formId_3.$1044c33e909a4fd0b8a7ff8831b686b2",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "maxLength": 26
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "key": "$2bb4a51b1ff54007a2d10c34f0d15c40",
+                            "hideExpression": "!formState.mainModel.formId_3.$1044c33e909a4fd0b8a7ff8831b686b2",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "maxLength": 26
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "key": "$c339a61eb0964ad99d78af5cf74d31b9",
+                            "hideExpression": "!formState.mainModel.formId_3.$1044c33e909a4fd0b8a7ff8831b686b2",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "maxLength": 26
+                            }
+                        },
+                        {
+                            "className": "col-12",
+                            "type": "input",
+                            "key": "$e21dcd4f7cee41cd983858a0e81f5c88",
+                            "templateOptions": {
+                                "fullWidth": true,
+                                "label": "ADDRESS.POSTAL",
+                                "required": false,
+                                "type": "tel",
+                                "maxLength": 9
+                            },
+                            "validators": {
+                                "validation": [
+                                    "digitOnly"
+                                ]
+                            },
+                            "hideExpression": "!formState.mainModel.formId_3.$1044c33e909a4fd0b8a7ff8831b686b2 && formState.mainModel.formId_3.$0dfc96dc7b894a099322607319a367e4==='HK' || formState.mainModel.formId_3.$0dfc96dc7b894a099322607319a367e4==='MC'"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}F

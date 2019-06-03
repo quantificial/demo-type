@@ -1,0 +1,166 @@
+{
+    "label": "FORM.HEADER.SIGNATURE_AND_SUBMISSION",
+    "fields": [
+        {
+            "key": "formId_11",
+            "fieldGroup": [
+                {
+                    "templateOptions": {
+                        "content": "formId_11.$ed4535b321d54010a428946e4a3504e8"
+                    },
+                    "type": "header3"
+                },
+                {
+                    "templateOptions": {
+                        "content": "formId_11.$df1005e5ec7744d6adb2e45890795804"
+                    },
+                    "type": "paragraph"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_11.$8292d56f105c4a5098fb2084b9559716",
+                        "required": true,
+                        "signType": "O",
+                        "dialogLabel": {
+                            "clear": "FORM.SIGNATURE.DIALOG_CONTROLS.CLEAR",
+                            "confirm": "FORM.SIGNATURE.DIALOG_CONTROLS.CONFIRM",
+                            "attention": "FORM.SIGNATURE.DIALOG_CONTROLS.ATTENTION",
+                            "attentionText": "FORM.SIGNATURE.DIALOG_CONTROLS.ATTENTIONTEXT"
+                        }
+                    },
+                    "key": "$8292d56f105c4a5098fb2084b9559716",
+                    "type": "signature"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_11.$5a2f50869f714ad7ae7badd69a479c62",
+                        "required": true,
+                        "signType": "I",
+                        "dialogLabel": {
+                            "clear": "FORM.SIGNATURE.DIALOG_CONTROLS.CLEAR",
+                            "confirm": "FORM.SIGNATURE.DIALOG_CONTROLS.CONFIRM",
+                            "attention": "FORM.SIGNATURE.DIALOG_CONTROLS.ATTENTION",
+                            "attentionText": "FORM.SIGNATURE.DIALOG_CONTROLS.ATTENTIONTEXT"
+                        }
+                    },
+                    "hideExpression": "!formState.shareOption.hasProposal || formState.mainModel.formId_12.$d660203808cb4381a481e8d3b5669012",
+                    "key": "$5a2f50869f714ad7ae7badd69a479c62",
+                    "type": "signature"
+                },
+                {
+                    "templateOptions": {
+                        "content": "formId_11.$531f15195c954cf88b570d2bd1f8cfd8"
+                    },
+                    "key": "$531f15195c954cf88b570d2bd1f8cfd8",
+                    "type": "header3"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_11.$d08ee73253fe4da489180010b232fce8",
+                        "required": true
+                    },
+                    "key": "$d08ee73253fe4da489180010b232fce8",
+                    "type": "input"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_11.$61a5fbad1ac0412383594e3cfc730da8",
+                        "required": true,
+                        "maxLength": 6
+                    },
+                    "key": "$61a5fbad1ac0412383594e3cfc730da8",
+                    "type": "input"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_11.$8311db148a1347aaa1417cfb5f54f169",
+                        "required": true
+                    },
+                    "key": "$8311db148a1347aaa1417cfb5f54f169",
+                    "type": "input"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_11.$517ccc5019ef499f8dfa796217cb059c",
+                        "required": true,
+                        "signType": "A",
+                        "dialogLabel": {
+                            "clear": "FORM.SIGNATURE.DIALOG_CONTROLS.CLEAR",
+                            "confirm": "FORM.SIGNATURE.DIALOG_CONTROLS.CONFIRM",
+                            "attention": "FORM.SIGNATURE.DIALOG_CONTROLS.ATTENTION",
+                            "attentionText": "FORM.SIGNATURE.DIALOG_CONTROLS.ATTENTIONTEXT"
+                        }
+                    },
+                    "key": "$517ccc5019ef499f8dfa796217cb059c",
+                    "type": "signature"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_11.$9e0149dce7664d0b9b6bc5ee0d68a8b4",
+                        "required": false,
+                        "multiple": false
+                    },
+                    "defaultValue": false,
+                    "key": "$9e0149dce7664d0b9b6bc5ee0d68a8b4",
+                    "type": "checkbox"
+                },
+                {
+                    "type": "repeat",
+                    "defaultValue": [
+                        {}
+                    ],
+                    "hideExpression": "!formState.mainModel.formId_11.$9e0149dce7664d0b9b6bc5ee0d68a8b4",
+                    "fieldArray": {
+                        "templateOptions": {
+                            "max": 1,
+                            "specifyWrapper": true
+                        },
+                        "fieldGroup": [
+                            {
+                                "templateOptions": {
+                                    "label": "formId_11.$1fa8bfaa15d04d8fa426df9dee829a5e",
+                                    "required": true
+                                },
+                                "key": "$1fa8bfaa15d04d8fa426df9dee829a5e",
+                                "type": "input"
+                            },
+                            {
+                                "templateOptions": {
+                                    "label": "formId_11.$7d84c2ed83ef4ab6b8ff0b07b46c4b3a",
+                                    "required": true,
+                                    "maxLength": 6
+                                },
+                                "key": "$7d84c2ed83ef4ab6b8ff0b07b46c4b3a",
+                                "type": "input"
+                            },
+                            {
+                                "templateOptions": {
+                                    "label": "formId_11.$8d90701c914841f6af023f4a2e191d50",
+                                    "required": true
+                                },
+                                "key": "$8d90701c914841f6af023f4a2e191d50",
+                                "type": "input"
+                            },
+                            {
+                                "templateOptions": {
+                                    "label": "formId_11.$80bc7c6844314b278a83be20c2fdd06d",
+                                    "required": true,
+                                    "signType": "U",
+                                    "dialogLabel": {
+                                        "clear": "FORM.SIGNATURE.DIALOG_CONTROLS.CLEAR",
+                                        "confirm": "FORM.SIGNATURE.DIALOG_CONTROLS.CONFIRM",
+                                        "attention": "FORM.SIGNATURE.DIALOG_CONTROLS.ATTENTION",
+                                        "attentionText": "FORM.SIGNATURE.DIALOG_CONTROLS.ATTENTIONTEXT"
+                                    }
+                                },
+                                "key": "$80bc7c6844314b278a83be20c2fdd06d",
+                                "type": "signature"
+                            }
+                        ]
+                    },
+                    "key": "$84b12798d8264fc887772b3eed2dc493"
+                }
+            ]
+        }
+    ]
+}

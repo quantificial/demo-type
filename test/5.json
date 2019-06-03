@@ -1,0 +1,359 @@
+{
+    "label": "FORM.HEADER.APPLICATION_INFORMATION",
+    "fields": [
+        {
+            "key": "formId_5",
+            "fieldGroup": [
+                {
+                    "templateOptions": {
+                        "required": false,
+                        "content": "formId_5.$88d2fbff008d4794bd5130acf9bc0b67"
+                    },
+                    "type": "header2"
+                },
+                {
+                    "templateOptions": {
+                        "required": false,
+                        "content": "formId_5.$7654941fde384c3a80b39419f7e629da"
+                    },
+                    "type": "header3"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_5.$da34fa99de514ec28fadc9ff008836bd",
+                        "required": false,
+                        "multiple": false
+                    },
+                    "defaultValue": false,
+                    "key": "$da34fa99de514ec28fadc9ff008836bd",
+                    "type": "checkbox"
+                },
+                {
+                    "type": "repeat",
+                    "hideExpression": "formState.mainModel.formId_5.$da34fa99de514ec28fadc9ff008836bd",
+                    "defaultValue": [
+                        {}
+                    ],
+                    "templateOptions": {
+                        "validatorControl": {
+                            "triggerBykey": "$ec10537392ba4a26af60fbee725f0e80"
+                        }
+                    },
+                    "validators": {
+                        "validation": [
+                            "shareRatio"
+                        ]
+                    },
+                    "fieldArray": {
+                        "templateOptions": {
+                            "max": 10
+                        },
+                        "fieldGroup": [
+                            {
+                                "key": "$3dbc3066c5fb49acbf6ed82f019a8bc3",
+                                "type": "autocomplete",
+                                "preprocess": [
+                                    {
+                                        "preprocessor": "lov-preprocessor",
+                                        "data": {
+                                            "lov": "selectClass"
+                                        }
+                                    }
+                                ],
+                                "defaultValue": "1",
+                                "templateOptions": {
+                                    "classHidden": true,
+                                    "options": []
+                                }
+                            },
+                            {
+                                "templateOptions": {
+                                    "label": "formId_5.$e99a5309d0314520bf54d0ed39af3701",
+                                    "required": true,
+                                    "fullWidth": true,
+                                    "maxLength": 50
+                                },
+                                "validators": {
+                                    "validation": [
+                                        "englishCharacters"
+                                    ]
+                                },
+                                "key": "$e99a5309d0314520bf54d0ed39af3701",
+                                "type": "input"
+                            },
+                            {
+                                "templateOptions": {
+                                    "label": "formId_5.$58769bc9b05a4376bcd7143642849388",
+                                    "required": true,
+                                    "fullWidth": true,
+                                    "maxLength": 50
+                                },
+                                "validators": {
+                                    "validation": [
+                                        "englishCharacters"
+                                    ]
+                                },
+                                "key": "$58769bc9b05a4376bcd7143642849388",
+                                "type": "input"
+                            },
+                            {
+                                "templateOptions": {
+                                    "label": "formId_5.$ede54ef517914278b9a8be44a120a1a0",
+                                    "fullWidth": true,
+                                    "maxLength": 20
+                                },
+                                "validators": {
+                                    "validation": [
+                                        "chineseCharacters"
+                                    ]
+                                },
+                                "key": "$ede54ef517914278b9a8be44a120a1a0",
+                                "type": "input"
+                            },
+                            {
+                                "templateOptions": {
+                                    "label": "formId_5.$9827bcfe7ec44083aed7db5dfaa5c027",
+                                    "required": true,
+                                    "options": [
+                                        {
+                                            "value": "",
+                                            "label": "FORM.AUTOCOMPLETE.PLEASE_SELECT"
+                                        }
+                                    ],
+                                    "fullWidth": true
+                                },
+                                "defaultValue": "",
+                                "key": "$9827bcfe7ec44083aed7db5dfaa5c027",
+                                "type": "autocomplete",
+                                "preprocess": [
+                                    {
+                                        "preprocessor": "lov-preprocessor",
+                                        "data": {
+                                            "lov": "selectRelationshipForBeneficiary"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "hideExpression": "model.$9827bcfe7ec44083aed7db5dfaa5c027 !== 'OTH'",
+                                "type": "input",
+                                "key": "$d10e355a37a7419bb2e953d067fb123d",
+                                "templateOptions": {
+                                    "required": true,
+                                    "fullWidth": true,
+                                    "label": "formId_5.$d10e355a37a7419bb2e953d067fb123d"
+                                }
+                            },
+                            {
+                                "templateOptions": {
+                                    "label": "formId_5.$b4db5d7c74e04855a84bd33b60a13196",
+                                    "required": true,
+                                    "fullWidth": true,
+                                    "maxLength": 20
+                                },
+                                "validators": {
+                                    "validation": [
+                                        "asciiCharacters"
+                                    ]
+                                },
+                                "key": "$b4db5d7c74e04855a84bd33b60a13196",
+                                "type": "input"
+                            },
+                            {
+                                "templateOptions": {
+                                    "label": "formId_5.$ec10537392ba4a26af60fbee725f0e80",
+                                    "required": true,
+                                    "description": "FORM.DESCRIPTION.SHARE_RATIO",
+                                    "fullWidth": true,
+                                    "type": "number"
+                                },
+                                "validators": {
+                                    "validation": [
+                                        "childShareRatio"
+                                    ]
+                                },
+                                "key": "$ec10537392ba4a26af60fbee725f0e80",
+                                "type": "input"
+                            }
+                        ]
+                    },
+                    "key": "$1fd42e25e93f466da4c42b81a569a59c"
+                },
+                {
+                    "hideExpression": "formState.mainModel.formId_5.$da34fa99de514ec28fadc9ff008836bd",
+                    "fieldGroup": [
+                        {
+                            "templateOptions": {
+                                "label": "formId_5.$55d36bffdb824caea36e2e5ce22b12f6",
+                                "required": false
+                            },
+                            "defaultValue": false,
+                            "key": "$55d36bffdb824caea36e2e5ce22b12f6",
+                            "type": "checkbox"
+                        },
+                        {
+                            "templateOptions": {
+                                "required": false,
+                                "content": "formId_5.$981650fdde03471b9d0bc0ddca0ec418"
+                            },
+                            "type": "header3",
+                            "hideExpression": "!formState.mainModel.formId_5.$55d36bffdb824caea36e2e5ce22b12f6"
+                        },
+                        {
+                            "type": "repeat",
+                            "hideExpression": "!formState.mainModel.formId_5.$55d36bffdb824caea36e2e5ce22b12f6",
+                            "defaultValue": [
+                                {}
+                            ],
+                            "templateOptions": {
+                                "validatorControl": {
+                                    "triggerBykey": "$3a772a25bdf64cef87419271b450f599"
+                                }
+                            },
+                            "validators": {
+                                "validation": [
+                                    "shareRatio"
+                                ]
+                            },
+                            "fieldArray": {
+                                "templateOptions": {
+                                    "max": 10
+                                },
+                                "fieldGroup": [
+                                    {
+                                        "key": "$fb9cb5ca44cb41f18f88e39525922fc4",
+                                        "type": "autocomplete",
+                                        "preprocess": [
+                                            {
+                                                "preprocessor": "lov-preprocessor",
+                                                "data": {
+                                                    "lov": "selectClass"
+                                                }
+                                            }
+                                        ],
+                                        "defaultValue": "2",
+                                        "templateOptions": {
+                                            "classHidden": true,
+                                            "options": []
+                                        }
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_5.$8abc6330832a4c7ead0fa9a390c6d583",
+                                            "required": true,
+                                            "fullWidth": true,
+                                            "maxLength": 50
+                                        },
+                                        "validators": {
+                                            "validation": [
+                                                "englishCharacters"
+                                            ]
+                                        },
+                                        "key": "$8abc6330832a4c7ead0fa9a390c6d583",
+                                        "type": "input"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_5.$1f2f3355d08941968389accd3a0e96c8",
+                                            "required": true,
+                                            "fullWidth": true,
+                                            "maxLength": 50
+                                        },
+                                        "validators": {
+                                            "validation": [
+                                                "englishCharacters"
+                                            ]
+                                        },
+                                        "key": "$1f2f3355d08941968389accd3a0e96c8",
+                                        "type": "input"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_5.$f2ec8775ca704a89a736a1814d9fb55e",
+                                            "required": false,
+                                            "fullWidth": true,
+                                            "maxLength": 20
+                                        },
+                                        "validators": {
+                                            "validation": [
+                                                "chineseCharacters"
+                                            ]
+                                        },
+                                        "key": "$f2ec8775ca704a89a736a1814d9fb55e",
+                                        "type": "input"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_5.$4b2dd32224d6437e8d67ce81beefb703",
+                                            "required": true,
+                                            "options": [
+                                                {
+                                                    "value": "",
+                                                    "label": "FORM.AUTOCOMPLETE.PLEASE_SELECT"
+                                                }
+                                            ],
+                                            "fullWidth": true
+                                        },
+                                        "defaultValue": "",
+                                        "key": "$4b2dd32224d6437e8d67ce81beefb703",
+                                        "type": "autocomplete",
+                                        "preprocess": [
+                                            {
+                                                "preprocessor": "lov-preprocessor",
+                                                "data": {
+                                                    "lov": "selectRelationshipForBeneficiary"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "hideExpression": "model.$4b2dd32224d6437e8d67ce81beefb703 !== 'OTH'",
+                                        "type": "input",
+                                        "key": "$692f3f0683984b8ba316c5d8da2b479e",
+                                        "templateOptions": {
+                                            "required": true,
+                                            "fullWidth": true,
+                                            "label": "formId_5.$692f3f0683984b8ba316c5d8da2b479e"
+                                        }
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_5.$3a905aed8a704660af31e93081a86ddf",
+                                            "required": true,
+                                            "fullWidth": true,
+                                            "maxLength": 20
+                                        },
+                                        "validators": {
+                                            "validation": [
+                                                "asciiCharacters"
+                                            ]
+                                        },
+                                        "key": "$3a905aed8a704660af31e93081a86ddf",
+                                        "type": "input"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_5.$3a772a25bdf64cef87419271b450f599",
+                                            "required": true,
+                                            "description": "FORM.DESCRIPTION.SHARE_RATIO",
+                                            "fullWidth": true,
+                                            "type": "number"
+                                        },
+                                        "validators": {
+                                            "validation": [
+                                                "childShareRatio"
+                                            ]
+                                        },
+                                        "key": "$3a772a25bdf64cef87419271b450f599",
+                                        "type": "input"
+                                    }
+                                ]
+                            },
+                            "key": "$d745f8a8ec78473fa45150cf551cff2d"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

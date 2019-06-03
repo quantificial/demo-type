@@ -1,0 +1,551 @@
+{
+    "label": "FORM.HEADER.APPLICATION_INFORMATION",
+    "fields": [
+        {
+            "key": "formId_6",
+            "hideExpression": "!formState.mainModel.formId_12.$2bce066711614d509eacd666abfc6777",
+            "fieldGroup": [
+                {
+                    "templateOptions": {
+                        "label": "formId_6.$63e2bc638d6945c8ac3082dc4f9846aa",
+                        "required": false
+                    },
+                    "defaultValue": false,
+                    "hideExpression": "formState.mainModel.formId_12.$eb9447b037604b448463422317d6c35c",
+                    "key": "$63e2bc638d6945c8ac3082dc4f9846aa",
+                    "type": "checkbox"
+                },
+                {
+                    "hideExpression": "!formState.mainModel.formId_12.$eb9447b037604b448463422317d6c35c &&!formState.mainModel.formId_6.$63e2bc638d6945c8ac3082dc4f9846aa",
+                    "fieldGroup": [
+                        {
+                            "templateOptions": {
+                                "required": false,
+                                "content": "formId_6.$2585f4cfd7654b45b127621233b147db"
+                            },
+                            "type": "header2"
+                        },
+                        {
+                            "templateOptions": {
+                                "content": "formId_6.$363136974aa54ad5a5423ddd17a82fcf"
+                            },
+                            "type": "paragraph"
+                        },
+                        {
+                            "templateOptions": {
+                                "label": "formId_6.$a25c222b4b8144a0a3636f910fb96401",
+                                "required": true,
+                                "singleColumn": false,
+                                "canDeselect": true,
+                                "options": [
+                                    {
+                                        "value": true,
+                                        "label": "FORM.RADIO.YES"
+                                    },
+                                    {
+                                        "value": false,
+                                        "label": "FORM.RADIO.NO"
+                                    }
+                                ]
+                            },
+                            "key": "$a25c222b4b8144a0a3636f910fb96401",
+                            "type": "radio"
+                        },
+                        {
+                            "type": "repeat",
+                            "defaultValue": [
+                                {}
+                            ],
+                            "hideExpression": "!formState.mainModel.formId_6.$a25c222b4b8144a0a3636f910fb96401",
+                            "fieldArray": {
+                                "templateOptions": {
+                                    "max": 999
+                                },
+                                "fieldGroup": [
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$c3b251fb843b46bcb1379cbabcf991c1",
+                                            "required": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$c3b251fb843b46bcb1379cbabcf991c1",
+                                        "type": "input"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$a6e8bd4889154e17ac0882886ade8d67",
+                                            "fullWidth": true,
+                                            "required": true,
+                                            "multiple": true,
+                                            "options": [
+                                                {
+                                                    "label": "FORM.OPTIONS.TYPE_OF_INSURANCE.A",
+                                                    "value": "A"
+                                                },
+                                                {
+                                                    "label": "FORM.OPTIONS.TYPE_OF_INSURANCE.B",
+                                                    "value": "B"
+                                                },
+                                                {
+                                                    "label": "FORM.OPTIONS.TYPE_OF_INSURANCE.C",
+                                                    "value": "C"
+                                                },
+                                                {
+                                                    "label": "FORM.OPTIONS.TYPE_OF_INSURANCE.D",
+                                                    "value": "D"
+                                                },
+                                                {
+                                                    "label": "FORM.OPTIONS.TYPE_OF_INSURANCE.E",
+                                                    "value": "E"
+                                                },
+                                                {
+                                                    "label": "FORM.OPTIONS.TYPE_OF_INSURANCE.F",
+                                                    "value": "F"
+                                                }
+                                            ]
+                                        },
+                                        "key": "$a6e8bd4889154e17ac0882886ade8d67",
+                                        "type": "checkbox"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$1aa7d3654acc45fd91c045f3aa29dc29",
+                                            "required": true,
+                                            "specifyWrapper": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$1aa7d3654acc45fd91c045f3aa29dc29",
+                                        "type": "input",
+                                        "hideExpression": "!model.$a6e8bd4889154e17ac0882886ade8d67||model.$a6e8bd4889154e17ac0882886ade8d67.indexOf('A')===-1"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$5084808057c64df1bb279748b0a9fc1c",
+                                            "required": true,
+                                            "specifyWrapper": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$5084808057c64df1bb279748b0a9fc1c",
+                                        "type": "input",
+                                        "hideExpression": "!model.$a6e8bd4889154e17ac0882886ade8d67||model.$a6e8bd4889154e17ac0882886ade8d67.indexOf('B')===-1"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$0013ec9290f844d980be215e53ca0bf1",
+                                            "required": true,
+                                            "specifyWrapper": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$0013ec9290f844d980be215e53ca0bf1",
+                                        "type": "input",
+                                        "hideExpression": "!model.$a6e8bd4889154e17ac0882886ade8d67||model.$a6e8bd4889154e17ac0882886ade8d67.indexOf('C')===-1"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$86a3ccbaab2a46bca669d2ce84c6adcd",
+                                            "required": true,
+                                            "specifyWrapper": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$86a3ccbaab2a46bca669d2ce84c6adcd",
+                                        "type": "input",
+                                        "hideExpression": "!model.$a6e8bd4889154e17ac0882886ade8d67||model.$a6e8bd4889154e17ac0882886ade8d67.indexOf('D')===-1"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$4d7a55c21e3a447c979366fe761cd510",
+                                            "required": true,
+                                            "specifyWrapper": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$4d7a55c21e3a447c979366fe761cd510",
+                                        "type": "input",
+                                        "hideExpression": "!model.$a6e8bd4889154e17ac0882886ade8d67||model.$a6e8bd4889154e17ac0882886ade8d67.indexOf('E')===-1"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$345ba5e4ac62400391b4c67cc69762d3",
+                                            "required": true,
+                                            "specifyWrapper": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$345ba5e4ac62400391b4c67cc69762d3",
+                                        "type": "input",
+                                        "hideExpression": "!model.$a6e8bd4889154e17ac0882886ade8d67||model.$a6e8bd4889154e17ac0882886ade8d67.indexOf('F')===-1"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$4ecbd39c240e4cfcb5d4d3804202bf83",
+                                            "required": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$4ecbd39c240e4cfcb5d4d3804202bf83",
+                                        "type": "input"
+                                    }
+                                ]
+                            },
+                            "key": "$ca26adde2d9b40a39c9147065fdb024d"
+                        },
+                        {
+                            "templateOptions": {
+                                "label": "formId_6.$75782cf9e17f43db84639bcc01a52446",
+                                "required": true,
+                                "singleColumn": false,
+                                "canDeselect": true,
+                                "options": [
+                                    {
+                                        "value": true,
+                                        "label": "FORM.RADIO.YES"
+                                    },
+                                    {
+                                        "value": false,
+                                        "label": "FORM.RADIO.NO"
+                                    }
+                                ]
+                            },
+                            "key": "$75782cf9e17f43db84639bcc01a52446",
+                            "type": "radio"
+                        },
+                        {
+                            "type": "repeat",
+                            "defaultValue": [
+                                {}
+                            ],
+                            "hideExpression": "!formState.mainModel.formId_6.$75782cf9e17f43db84639bcc01a52446",
+                            "fieldArray": {
+                                "templateOptions": {
+                                    "max": 999
+                                },
+                                "fieldGroup": [
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$87da34dd7b274eaaa49946aa5b1398dc",
+                                            "required": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$87da34dd7b274eaaa49946aa5b1398dc",
+                                        "type": "input"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$fe9ea5c180f740f7a245c744b4a0d2fa",
+                                            "fullWidth": true,
+                                            "required": true,
+                                            "multiple": true,
+                                            "options": [
+                                                {
+                                                    "label": "FORM.OPTIONS.TYPE_OF_INSURANCE.A",
+                                                    "value": "A"
+                                                },
+                                                {
+                                                    "label": "FORM.OPTIONS.TYPE_OF_INSURANCE.B",
+                                                    "value": "B"
+                                                },
+                                                {
+                                                    "label": "FORM.OPTIONS.TYPE_OF_INSURANCE.C",
+                                                    "value": "C"
+                                                },
+                                                {
+                                                    "label": "FORM.OPTIONS.TYPE_OF_INSURANCE.D",
+                                                    "value": "D"
+                                                },
+                                                {
+                                                    "label": "FORM.OPTIONS.TYPE_OF_INSURANCE.E",
+                                                    "value": "E"
+                                                },
+                                                {
+                                                    "label": "FORM.OPTIONS.TYPE_OF_INSURANCE.F",
+                                                    "value": "F"
+                                                }
+                                            ]
+                                        },
+                                        "key": "$fe9ea5c180f740f7a245c744b4a0d2fa",
+                                        "type": "checkbox"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$766fdf161f9e4b96ae73ef29b2754cf9",
+                                            "required": true,
+                                            "specifyWrapper": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$766fdf161f9e4b96ae73ef29b2754cf9",
+                                        "type": "input",
+                                        "hideExpression": "!model.$fe9ea5c180f740f7a245c744b4a0d2fa||model.$fe9ea5c180f740f7a245c744b4a0d2fa.indexOf('A')===-1"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$ab16a344439f4ba49b12434c384d551f",
+                                            "required": true,
+                                            "specifyWrapper": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$ab16a344439f4ba49b12434c384d551f",
+                                        "type": "input",
+                                        "hideExpression": "!model.$fe9ea5c180f740f7a245c744b4a0d2fa||model.$fe9ea5c180f740f7a245c744b4a0d2fa.indexOf('B')===-1"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$f2ec9cde56484f96a552d45fbeea2a06",
+                                            "required": true,
+                                            "specifyWrapper": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$f2ec9cde56484f96a552d45fbeea2a06",
+                                        "type": "input",
+                                        "hideExpression": "!model.$fe9ea5c180f740f7a245c744b4a0d2fa||model.$fe9ea5c180f740f7a245c744b4a0d2fa.indexOf('C')===-1"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$4c053f62a939462d9b13b8681228a0bf",
+                                            "required": true,
+                                            "specifyWrapper": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$4c053f62a939462d9b13b8681228a0bf",
+                                        "type": "input",
+                                        "hideExpression": "!model.$fe9ea5c180f740f7a245c744b4a0d2fa||model.$fe9ea5c180f740f7a245c744b4a0d2fa.indexOf('D')===-1"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$71dd7f6602864e918e66ad22562d1005",
+                                            "required": true,
+                                            "specifyWrapper": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$71dd7f6602864e918e66ad22562d1005",
+                                        "type": "input",
+                                        "hideExpression": "!model.$fe9ea5c180f740f7a245c744b4a0d2fa||model.$fe9ea5c180f740f7a245c744b4a0d2fa.indexOf('E')===-1"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$5c9e8c40744142b6b8f535a4965612eb",
+                                            "required": true,
+                                            "specifyWrapper": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$5c9e8c40744142b6b8f535a4965612eb",
+                                        "type": "input",
+                                        "hideExpression": "!model.$fe9ea5c180f740f7a245c744b4a0d2fa||model.$fe9ea5c180f740f7a245c744b4a0d2fa.indexOf('F')===-1"
+                                    },
+                                    {
+                                        "templateOptions": {
+                                            "label": "formId_6.$2916ac73e87d4b4c98e0a2e93633efc7",
+                                            "required": true,
+                                            "fullWidth": true
+                                        },
+                                        "key": "$2916ac73e87d4b4c98e0a2e93633efc7",
+                                        "type": "input"
+                                    }
+                                ]
+                            },
+                            "key": "$6c64d32d9460448ba037072edf6b46ce"
+                        },
+                        {
+                            "hideExpression": "!formState.mainModel.formId_12.$43c76994b4e940e699451160d5ea5ee0",
+                            "templateOptions": {
+                                "required": false,
+                                "content": "formId_6.$8c2d345ef69f4d408df051be64dea873"
+                            },
+                            "type": "header3"
+                        },
+                        {
+                            "templateOptions": {
+                                "label": "formId_6.$18d1df94d7424a0ba3252970a4dfc3ec",
+                                "required": true,
+                                "singleColumn": false,
+                                "canDeselect": true,
+                                "options": [
+                                    {
+                                        "value": true,
+                                        "label": "FORM.RADIO.YES"
+                                    },
+                                    {
+                                        "value": false,
+                                        "label": "FORM.RADIO.NO"
+                                    }
+                                ]
+                            },
+                            "key": "$18d1df94d7424a0ba3252970a4dfc3ec",
+                            "type": "radio"
+                        },
+                        {
+                            "templateOptions": {
+                                "label": "formId_6.$fe20a5bb60654dfd8d44aea53e6d84d6",
+                                "required": true,
+                                "row": 4,
+                                "column": 1,
+                                "specifyWrapper": true
+                            },
+                            "key": "$fe20a5bb60654dfd8d44aea53e6d84d6",
+                            "type": "textarea",
+                            "hideExpression": "!formState.mainModel.formId_6.$18d1df94d7424a0ba3252970a4dfc3ec"
+                        },
+                        {
+                            "templateOptions": {
+                                "label": "formId_6.$398d66fe1c3041cd8f3b9862c68f35ff",
+                                "required": true,
+                                "singleColumn": false,
+                                "canDeselect": true,
+                                "options": [
+                                    {
+                                        "value": true,
+                                        "label": "FORM.RADIO.YES"
+                                    },
+                                    {
+                                        "value": false,
+                                        "label": "FORM.RADIO.NO"
+                                    }
+                                ]
+                            },
+                            "key": "$398d66fe1c3041cd8f3b9862c68f35ff",
+                            "type": "radio"
+                        },
+                        {
+                            "templateOptions": {
+                                "content": "formId_6.$1ae3bcfadded4c7199b6b4769437d33d"
+                            },
+                            "type": "paragraph",
+                            "hideExpression": "!formState.mainModel.formId_6.$398d66fe1c3041cd8f3b9862c68f35ff"
+                        },
+                        {
+                            "templateOptions": {
+                                "label": "formId_6.$ba8f748bc569476d90f320a8d4173cde",
+                                "required": true,
+                                "singleColumn": false,
+                                "canDeselect": true,
+                                "options": [
+                                    {
+                                        "value": true,
+                                        "label": "FORM.RADIO.YES"
+                                    },
+                                    {
+                                        "value": false,
+                                        "label": "FORM.RADIO.NO"
+                                    }
+                                ]
+                            },
+                            "key": "$ba8f748bc569476d90f320a8d4173cde",
+                            "type": "radio"
+                        },
+                        {
+                            "templateOptions": {
+                                "label": "formId_6.$ecfd69ec582b4f0a9cba45246a16d5d7",
+                                "required": true,
+                                "row": 4,
+                                "column": 1,
+                                "specifyWrapper": true
+                            },
+                            "key": "$ecfd69ec582b4f0a9cba45246a16d5d7",
+                            "type": "textarea",
+                            "hideExpression": "!formState.mainModel.formId_6.$ba8f748bc569476d90f320a8d4173cde"
+                        },
+                        {
+                            "hideExpression": "!formState.mainModel.formId_12.$43c76994b4e940e699451160d5ea5ee0",
+                            "fieldGroup": [
+                                {
+                                    "templateOptions": {
+                                        "required": false,
+                                        "content": "formId_6.$0406ecf314f74f918e0b6e8eeba79742"
+                                    },
+                                    "type": "header3"
+                                },
+                                {
+                                    "templateOptions": {
+                                        "label": "formId_6.$0dd808863ce941708787b351e0802b18",
+                                        "required": true,
+                                        "singleColumn": false,
+                                        "canDeselect": true,
+                                        "options": [
+                                            {
+                                                "value": true,
+                                                "label": "FORM.RADIO.YES"
+                                            },
+                                            {
+                                                "value": false,
+                                                "label": "FORM.RADIO.NO"
+                                            }
+                                        ]
+                                    },
+                                    "key": "$0dd808863ce941708787b351e0802b18",
+                                    "type": "radio"
+                                },
+                                {
+                                    "templateOptions": {
+                                        "label": "formId_6.$c7e21dff36524980ad685e05fa4e53d0",
+                                        "required": true,
+                                        "row": 4,
+                                        "column": 1,
+                                        "specifyWrapper": true
+                                    },
+                                    "key": "$c7e21dff36524980ad685e05fa4e53d0",
+                                    "type": "textarea",
+                                    "hideExpression": "!formState.mainModel.formId_6.$0dd808863ce941708787b351e0802b18"
+                                },
+                                {
+                                    "templateOptions": {
+                                        "label": "formId_6.$1b159738de7645d89410881a80ef2b5f",
+                                        "required": true,
+                                        "singleColumn": false,
+                                        "canDeselect": true,
+                                        "options": [
+                                            {
+                                                "value": true,
+                                                "label": "FORM.RADIO.YES"
+                                            },
+                                            {
+                                                "value": false,
+                                                "label": "FORM.RADIO.NO"
+                                            }
+                                        ]
+                                    },
+                                    "key": "$1b159738de7645d89410881a80ef2b5f",
+                                    "type": "radio"
+                                },
+                                {
+                                    "templateOptions": {
+                                        "content": "formId_6.$6ada24d622204d9ab6a23b2889a1e118"
+                                    },
+                                    "type": "paragraph",
+                                    "hideExpression": "!formState.mainModel.formId_6.$1b159738de7645d89410881a80ef2b5f"
+                                },
+                                {
+                                    "templateOptions": {
+                                        "label": "formId_6.$2509834b44554eff9969786416d24200",
+                                        "required": true,
+                                        "singleColumn": false,
+                                        "canDeselect": true,
+                                        "options": [
+                                            {
+                                                "value": true,
+                                                "label": "FORM.RADIO.YES"
+                                            },
+                                            {
+                                                "value": false,
+                                                "label": "FORM.RADIO.NO"
+                                            }
+                                        ]
+                                    },
+                                    "key": "$2509834b44554eff9969786416d24200",
+                                    "type": "radio"
+                                },
+                                {
+                                    "templateOptions": {
+                                        "label": "formId_6.$25d2fa1881e04034ba92eaa05d2566ca",
+                                        "required": true,
+                                        "row": 4,
+                                        "column": 1,
+                                        "specifyWrapper": true
+                                    },
+                                    "key": "$25d2fa1881e04034ba92eaa05d2566ca",
+                                    "type": "textarea",
+                                    "hideExpression": "!formState.mainModel.formId_6.$2509834b44554eff9969786416d24200"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

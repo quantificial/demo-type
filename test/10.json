@@ -1,0 +1,162 @@
+{
+    "label": "FORM.HEADER.MATERIAL_DISCLOSURE",
+    "fields": [
+        {
+            "key": "formId_10",
+            "fieldGroup": [
+                {
+                    "templateOptions": {
+                        "content": "formId_10.$c76b1fc992094c02ad001523179d0e81"
+                    },
+                    "type": "header3"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_10.$4c836c688ca54298951ba543be9129c8",
+                        "required": true,
+                        "canDeselect": true,
+                        "options": [
+                            {
+                                "value": true,
+                                "label": "FORM.RADIO.YES"
+                            },
+                            {
+                                "value": false,
+                                "label": "FORM.RADIO.NO"
+                            }
+                        ]
+                    },
+                    "key": "$4c836c688ca54298951ba543be9129c8",
+                    "type": "radio"
+                },
+                {
+                    "hideExpression": "!formState.mainModel.formId_10.$4c836c688ca54298951ba543be9129c8",
+                    "templateOptions": {
+                        "content": "formId_10.$04f590d8f33a4bb88f68c4975355b1c0"
+                    },
+                    "type": "paragraph"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_10.$59e2df91bff54034a1c469b8d01ba645",
+                        "required": true,
+                        "canDeselect": true,
+                        "options": [
+                            {
+                                "value": true,
+                                "label": "FORM.RADIO.YES"
+                            },
+                            {
+                                "value": false,
+                                "label": "FORM.RADIO.NO"
+                            }
+                        ]
+                    },
+                    "key": "$59e2df91bff54034a1c469b8d01ba645",
+                    "type": "radio"
+                },
+                {
+                    "hideExpression": "!formState.mainModel.formId_10.$59e2df91bff54034a1c469b8d01ba645",
+                    "templateOptions": {
+                        "content": "formId_10.$be3025caca444a1ab4e540cb37885ec2"
+                    },
+                    "type": "paragraph"
+                },
+                {
+                    "type": "paragraph",
+                    "templateOptions": {
+                        "content": "formId_10.$be0bff9d3c954e668518e34b276ab5c8"
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "templateOptions": {
+                        "content": "formId_10.$939c74759dad43b5835aaa305e806040"
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "templateOptions": {
+                        "content": "formId_10.$3175a270d6854fd2acb0318bfe61a2e7"
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "templateOptions": {
+                        "content": "formId_10.$b32c07dec14a43c298d12761ca1dd191"
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "templateOptions": {
+                        "content": "formId_10.$1e61ebfcd8ff4e2dad4c022c2e9afd93"
+                    }
+                },
+                {
+                    "templateOptions": {
+                        "content": "formId_10.$0888474efca24bd3b852472c6e33b530"
+                    },
+                    "type": "header3"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_10.$a98d84078fb34f58a86a9d63a5a3d65d",
+                        "dialogTitle": "FORM.PERSONAL_INFORMATION_COLLECTION_STATEMENT_AND_CONSENT",
+                        "dialogContent": "FORM.PERSONAL_INFORMATION_COLLECTION_STATEMENT_AND_CONSENT_DETAILS"
+                    },
+                    "key": "$a98d84078fb34f58a86a9d63a5a3d65d",
+                    "type": "text-dialog"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_10.$9af708ea00594f6d80583942aa0344ed",
+                        "dialogTitle": "FORM.USE_OF_PERSONAL_INFORMATION",
+                        "dialogContent": "FORM.USE_OF_PERSONAL_INFORMATION_DETAILS"
+                    },
+                    "key": "$9af708ea00594f6d80583942aa0344ed",
+                    "type": "text-dialog"
+                },
+                {
+                    "type": "paragraph",
+                    "templateOptions": {
+                        "content": "formId_10.$4e7ef2a318e9434aa8b922bd5cf32e22"
+                    }
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_10.$161ed21674a94442a6576ebc82da827f",
+                        "required": false,
+                        "multiple": false
+                    },
+                    "defaultValue": false,
+                    "key": "$161ed21674a94442a6576ebc82da827f",
+                    "type": "checkbox"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_10.$0c1afb9e26d54a53aea2d798defa0dfe",
+                        "required": false,
+                        "multiple": false
+                    },
+                    "defaultValue": false,
+                    "key": "$0c1afb9e26d54a53aea2d798defa0dfe",
+                    "type": "checkbox"
+                },
+                {
+                    "templateOptions": {
+                        "content": "formId_10.$9cbe714a2a9243bf9f14b2fa242ee306"
+                    },
+                    "type": "header3"
+                },
+                {
+                    "templateOptions": {
+                        "row": 4,
+                        "column": 1
+                    },
+                    "key": "$e2b1ab22f4464dcc9a67f3071058b852",
+                    "type": "textarea"
+                }
+            ]
+        }
+    ]
+}

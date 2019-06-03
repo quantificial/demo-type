@@ -1,0 +1,213 @@
+{
+    "label": "FORM.HEADER.COVERAGE_INFORMATION",
+    "fields": [
+        {
+            "key": "formId_1",
+            "fieldGroup": [
+                {
+                    "templateOptions": {
+                        "content": "formId_1.$24329c92ab5f432ead2959c4010b2a92"
+                    },
+                    "type": "header2"
+                },
+                {
+                    "templateOptions": {
+                        "required": true,
+                        "content": {
+                            "currency": "$262117fa0c544749bc6ad71d8e300d54",
+                            "age": "$5aa3b3729114477389866c1dafdd3dae",
+                            "gender": "$c2fbdc9e57224f67b2bd0056fa4b241b",
+                            "smoker": "$9acd65a724764402b2abed787b72202b",
+                            "basicPlanName": {
+                                "lang1": "$336271a6bf4b4c7a83c27f414450760e",
+                                "lang2": "$08cab843f1564cc2835214f44c3b34c7",
+                                "lang3": "$fb7caf45323e478cae3a980cf37e8099"
+                            },
+                            "basicPlanCoverageClass": {
+                                "lang1": "$dd01ec4ef4bf4a1f9a4427dd592048bc",
+                                "lang2": "$4428437f94ed40f09cf41c6a12fb2159",
+                                "lang3": "$c769f875757948b0a02272fb8c98ad6a"
+                            },
+                            "basicPlanCode": "$27137ab4e6694d3c98432d8ac252d026",
+                            "basicPlanSumAssured": "$7a226a992946439c80574121547adf8a",
+                            "riderPlanName": {
+                                "lang1": "$6cafc6abdecb4e28a34ff70419cb68d6",
+                                "lang2": "$73ef301b04c34b4093e8974f973bf54c",
+                                "lang3": "$b7f57190dab84e66a41583a18ae32828"
+                            },
+                            "riderPlanCoverageClass": {
+                                "lang1": "$1c0e27d951114a1c9c979b72ff20cf71",
+                                "lang2": "$da983c0535cf46d190a20713ecb89143",
+                                "lang3": "$c109e9c5e05e4b68ac372d6eb67aa85b"
+                            },
+                            "riderPlans": "$7df93ba630e64bc3b018904eb0d94915",
+                            "riderPlanCode": "$fab3e502a8744815a3c93eca4a866998",
+                            "riderPlanSumAssured": "$11bbcee259a94187b3cda41cf1d28a0a",
+                            "totalModalPremium": "$e4c25336e1864822ab33412dd386f6d4",
+                            "premiumMode": "$bdae3a2cdefd45b3aef231603767c506",
+                            "dividendOption": "$bc3bf66f0ecb467583de94ef719d1a8e",
+                            "areOwnerAndInsuredSame": "$d660203808cb4381a481e8d3b5669012",
+                            "unscheduledContribution": "$048d9aa547ba4cb1acc7970feb4739af",
+                            "isUnscheduledContributionDisplayed": "$52bc1b1eb2d1429581a2b3a114c670c5",
+                            "isDeathBenefitOptionsDisplayed": "$5c41a5f17fe2413d9941acfb42126e72",
+                            "deathBenefitOptions": "$99e176896d674f8f9a820345348f52c4",
+                            "attachTo": "$8735699885944af38618c24bc70e96df",
+                            "coverageClass": "$d37849468d444b9fa837caf3438d16e6",
+                            "applicationSignData": "$e26642b3018144b4aa5fef13326a354c"
+                        }
+                    },
+                    "key": "$8076ac2c1c714338bde66646c2b24e8c",
+                    "type": "proposal-info"
+                },
+                {
+                    "hideExpression": "!formState.mainModel.formId_12.$c83d81a6a3de4531a46a1148d091c841",
+                    "templateOptions": {
+                        "label": "formId_1.$075a20b67c7148dbb97c6d94f4976db3",
+                        "required": true,
+                        "singleColumn": false,
+                        "canDeselect": true,
+                        "options": [
+                            {
+                                "value": true,
+                                "label": "FORM.RADIO.YES"
+                            },
+                            {
+                                "value": false,
+                                "label": "FORM.RADIO.NO"
+                            }
+                        ]
+                    },
+                    "key": "$075a20b67c7148dbb97c6d94f4976db3",
+                    "type": "radio"
+                },
+                {
+                    "hideExpression": "!formState.mainModel.formId_12.$93c04459377d44ebb1c80152bafc60de",
+                    "templateOptions": {
+                        "label": "formId_1.$05f70d006cc843eebfafabb024950ed8",
+                        "required": true,
+                        "singleColumn": false,
+                        "canDeselect": true,
+                        "options": [
+                            {
+                                "value": true,
+                                "label": "FORM.RADIO.YES"
+                            },
+                            {
+                                "value": false,
+                                "label": "FORM.RADIO.NO"
+                            }
+                        ]
+                    },
+                    "key": "$05f70d006cc843eebfafabb024950ed8",
+                    "type": "radio"
+                },
+                {
+                    "hideExpression": "!formState.mainModel.formId_12.$4fa7d2526c2240019bb029bef5955479",
+                    "templateOptions": {
+                        "label": "formId_1.$a5e392a448c44559ba028aabae8162e3",
+                        "required": false
+                    },
+                    "defaultValue": false,
+                    "key": "$a5e392a448c44559ba028aabae8162e3",
+                    "type": "checkbox"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_1.$29081e03cc0c4bea9040fd17cce36f90",
+                        "required": false
+                    },
+                    "defaultValue": false,
+                    "key": "$29081e03cc0c4bea9040fd17cce36f90",
+                    "type": "checkbox"
+                },
+                {
+                    "templateOptions": {
+                        "required": true,
+                        "minDaysAgo": 180,
+                        "hideFutureDate": true,
+                        "description": "POLICY_DATE_BACK_TO_HELPER_TEXT"
+                    },
+                    "hideExpression": "!formState.mainModel.formId_1.$29081e03cc0c4bea9040fd17cce36f90",
+                    "key": "$fdb0527aae2e405589240c0717fb6bf4",
+                    "type": "datepicker"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_1.$38afbf7261d543048598e0651dad1bc4",
+                        "required": false,
+                        "singleColumn": false,
+                        "canDeselect": true,
+                        "options": []
+                    },
+                    "key": "$38afbf7261d543048598e0651dad1bc4",
+                    "type": "radio",
+                    "preprocess": [
+                        {
+                            "preprocessor": "lov-preprocessor",
+                            "data": {
+                                "lov": "selectNFO"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_1.$0987264691cf4e678f5daaeced753f81",
+                        "required": false,
+                        "singleColumn": false,
+                        "canDeselect": true,
+                        "options": []
+                    },
+                    "key": "$0987264691cf4e678f5daaeced753f81",
+                    "type": "radio",
+                    "preprocess": [
+                        {
+                            "preprocessor": "lov-preprocessor",
+                            "data": {
+                                "lov": "selectCCY"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_1.$0fad73f3a12f4861bd1fdcbb31cc2f7c",
+                        "required": false,
+                        "type": "number",
+                        "min": 0
+                    },
+                    "key": "$0fad73f3a12f4861bd1fdcbb31cc2f7c",
+                    "type": "input"
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_1.$c53050f00a1d4a37b75bda71f93b320e",
+                        "required": true,
+                        "singleColumn": false,
+                        "canDeselect": true,
+                        "options": []
+                    },
+                    "key": "$c53050f00a1d4a37b75bda71f93b320e",
+                    "type": "radio",
+                    "preprocess": [
+                        {
+                            "preprocessor": "lov-preprocessor",
+                            "data": {
+                                "lov": "selectInitialPremiumPaymentMethod"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "templateOptions": {
+                        "label": "formId_1.$6e5e9f18a3fb407ab59aa53ec45ef900",
+                        "required": true
+                    },
+                    "key": "$6e5e9f18a3fb407ab59aa53ec45ef900",
+                    "type": "input",
+                    "hideExpression": "formState.mainModel.formId_1.$c53050f00a1d4a37b75bda71f93b320e!=='4'"
+                }
+            ]
+        }
+    ]
+}
